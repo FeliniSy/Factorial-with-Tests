@@ -10,7 +10,9 @@ class FactorialBadInputTesting {
 
     @Test
     void testNullInput(){
-        assertNotNull(factorial);
+        assertThrows(NumberFormatException.class, () -> {
+            factorial.factorial(null);
+        });
 
     }
 
@@ -26,7 +28,7 @@ class FactorialBadInputTesting {
 
     @Test
     void testNonDigitalInput(){
-        assertThrows(IllegalArgumentException.class, () -> {factorial.factorial("ajdh");});
+        assertThrows(NumberFormatException.class, () -> {factorial.factorial("ajdh");});
 
     }
 }

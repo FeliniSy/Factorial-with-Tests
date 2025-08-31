@@ -11,13 +11,6 @@ class FactorialCsvParametrizedTesting {
     @ParameterizedTest
     @CsvFileSource(resources = "/csvCases.csv")
     void testFactorial(String input, String output) {
-        try {
-            int expected = Integer.parseInt(output);
-            assertEquals(expected, factorial.factorial(input));
-        } catch (NumberFormatException e) {
-            assertThrows(NumberFormatException.class, () -> factorial.factorial(input));
-        } catch (IllegalArgumentException e) {
-            assertThrows(IllegalArgumentException.class, () -> factorial.factorial(input));
-        }
+        assertEquals(output, factorial.factorial(input));
     }
 }
