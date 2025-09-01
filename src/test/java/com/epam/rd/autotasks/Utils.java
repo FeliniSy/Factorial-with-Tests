@@ -11,6 +11,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.instanceOf;
 import static org.junit.platform.engine.discovery.DiscoverySelectors.selectClass;
 
+
 public class Utils {
 
     static void printDetails(final TestExecutionSummary summary) {

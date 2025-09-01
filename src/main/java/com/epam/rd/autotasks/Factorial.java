@@ -1,5 +1,6 @@
 package com.epam.rd.autotasks;
 
+
 public class Factorial {
     public String factorial(String n) {
         int m = Integer.parseInt(n);
